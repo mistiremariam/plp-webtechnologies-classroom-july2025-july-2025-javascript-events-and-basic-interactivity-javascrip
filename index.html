@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive web page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Pages</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Interactive web page</h1>
-<button id="messageBtn">Click me</button>
-<p id="message"></p>
-<section>
-    <h2>Counter game</h2>g    <button id="incrementBtn">Increment</button>
-    <button id="decrementBtn">Decrement</button>
+  <h1>Interactive Web Page</h1>
+
+  <!-- Part 1: Event Handling -->
+  <button id="messageBtn">Click Me</button>
+  <p id="message"></p>
+
+  <!-- Part 2: Interactive Elements -->
+  <section>
+    <h2>Light/Dark Mode Toggle</h2>
+    <button id="toggleTheme">Toggle Theme</button>
+  </section>
+
+  <section>
+    <h2>Counter Game</h2>
+    <button id="increaseBtn">Increase</button>
+    <button id="resetBtn">Reset</button>
     <p>Count: <span id="counter">0</span></p>
-</section>
-<section>
+  </section>
+
+  <!-- Collapsible FAQ -->
+  <section>
     <h2>FAQ</h2>
     <button class="faq-toggle">What is JavaScript?</button>
-    <p class="faq-answer">JavaScript is a programming language that makes web pages interactive</p>
-</section>
-<h2>Sign up form</h2>
-<form id="signupForm" novalidate>
+    <p class="faq-answer">JavaScript is a programming language that makes web pages interactive.</p>
+  </section>
+
+  <!-- Part 3: Form Validation -->
+  <h2>Sign Up Form</h2>
+  <form id="signupForm" novalidate>
     <label>Name:</label>
-    <input type="text" id="name" required title="Enter your name" placeholder="Your name">
+    <input type="text" id="name" required title="Enter your full name" placeholder="Enter your full name">
     <small class="error" id="nameError"></small><br><br>
 
-    <label> Email:</label>
-    <input type="email" id="email" required title="Enter your email" placeholder="Your email">
-    <small class="error" id="emailError"></small><br><br>   
-    
+    <label>Email:</label>
+    <input type="email" id="email" required title="Enter your email address" placeholder="Enter your email address">
+    <small class="error" id="emailError"></small><br><br>
+
     <label>Password:</label>
-    <input type="password" id="password" required title="Enter your password" placeholder="Your password">
+    <input type="password" id="password" required title="Enter your password" placeholder="Enter your password">
     <small class="error" id="passwordError"></small><br><br>
 
     <button type="submit">Sign Up</button>
-</form>
-<p id="formMessage"></p>
-<script src="script.js"></script>
+  </form>
+  <p id="formSuccess"></p>
+
+  <script src="script.js"></script>
 </body>
 </html>
